@@ -25,4 +25,12 @@
             text-align: center;
         }
     }
+
+
+    .sensiba {
+        font-weight: bold;
+        @include u1.button_one(#f1f2f6, var(--text-color)) {
+            margin: 20px 0 0;
+        }
+    }
 }

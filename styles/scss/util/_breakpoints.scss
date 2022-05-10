@@ -1,4 +1,4 @@
-// we store different sizes for different screens here
+// we store different sizes for different screens here-
 $breakpoints-up: (
     "medium": 43.75em, // i.e 43.75 * 16 = 700px
     "large": 56.25em, // i.e 56.25 * 16 = 900px
@@ -22,4 +22,14 @@ $breakpoints-down: (
     @media (max-width: map-get($breakpoints-down, $size)) {
         @content
     }
+}
+
+@mixin button_one($bg_color: white, $text_color: pink) {
+    padding: 10px 15px;
+    background-color: $bg_color;
+    color: $text_color;
+    border-radius: 4px;
+    font-size: 15px;
+    border: 2px solid #fff;
+    @content;
 }

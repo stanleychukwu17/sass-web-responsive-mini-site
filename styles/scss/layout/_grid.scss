@@ -6,7 +6,7 @@
     grid-template-rows: auto auto;
     gap: 20px;
 
-    @include u1.breakpoints(large) {
+    @include u1.breakpoints(large) { // min-width: 900px
         grid-template-columns: 2fr 1fr;
         grid-template-rows: auto;
     }
@@ -26,9 +26,11 @@
         }
     }
 
-
     .sensiba {
         font-weight: bold;
+
+        // where u1.button_one is from /util/_breakpoints.scss
+        // where u1.$color_array is from /util/_fonts.scss
         @include u1.button_one(#f1f2f6, var(--text-color)) {
             margin: 20px 0 0;
             color: map-get($map: u1.$color_array, $key: 'darkred')
@@ -36,6 +38,7 @@
     }
 }
 
+// just for me to use in my learning purposes
 @each $key, $val in u1.$color_array {
     .text-#{$key} { color: light#{$val}; }
 }

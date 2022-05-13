@@ -24,3 +24,19 @@ a{text-decoration: none;}
 a:hover{text-decoration: underline;}
 img{border:0}
 a { color: u2.$link_color; }
+
+h1 {
+    font-size: 22px;
+
+    @include u1.breakpoints(medium) {
+        font-size: 28px;
+    }
+
+    @include u1.breakpoints(large) {
+        font-size: 36px;
+    }
+}
+h2 {
+    font-size: calc(10px + 2vw); // this is very web responsive
+    font-size: min(calc(10px + 2vw), 35px); // this is very web responsive
+}

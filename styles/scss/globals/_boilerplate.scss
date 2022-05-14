@@ -26,17 +26,17 @@ img{border:0}
 a { color: u2.$link_color; }
 
 h1 {
-    font-size: 22px;
+    font-size: u1.rem(22);
 
     @include u1.breakpoints(medium) {
-        font-size: 28px;
+        font-size: u1.rem(28);
     }
 
     @include u1.breakpoints(large) {
-        font-size: 36px;
+        font-size: u1.rem(36);
     }
 }
 h2 {
-    font-size: calc(10px + 2vw); // this is very web responsive
-    font-size: min(calc(10px + 2vw), 35px); // this is very web responsive
+    font-size: calc(u1.rem(10) + 2vw); // this is very web responsive
+    font-size: min(calc(u1.rem(10) + 2vw), u1.rem(35)); // this is very web responsive
 }
